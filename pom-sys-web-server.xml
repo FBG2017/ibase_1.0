@@ -12,10 +12,11 @@
 	<name>${project.artifactId}</name>
 	<packaging>pom</packaging>
 	<url>http://maven.apache.org</url>
-	<!-- clean package -P build tomcat7:run-war-only -f pom-web-server.xml -->
 	<modules>
 		<module>iBase4J-Common</module>
 		<module>iBase4J-SYS-Facade</module>
 		<module>iBase4J-SYS-Web</module>
 	</modules>
 </project>
+<!-- 只需选择父组织 -->
+<!-- clean:clean package -P build tomcat7:run-war-only -f pom-web-server.xml -->

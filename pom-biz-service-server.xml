@@ -17,5 +17,6 @@
 		<module>iBase4J-Biz-Facade</module>
 		<module>iBase4J-Biz-Service</module>
 	</modules>
-	<!-- clean package -P build tomcat7:run-war-only -f pom-biz-service-server.xml -->
 </project>
+<!-- 只需选择父组织 -->
+<!-- clean:clean package -P build tomcat7:run-war-only -f pom-biz-service-server.xml -->
