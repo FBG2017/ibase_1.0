@@ -1,65 +1,63 @@
-## iBas4JÏîÄ¿¼ò½é
+## iBas4Jé¡¹ç›®ç®€ä»‹
 
-- iBase4JÊÇJavaÓïÑÔµÄ·Ö²¼Ê½ÏµÍ³¼Ü¹¹¡£ Ê¹ÓÃSpringÕûºÏ¿ªÔ´¿ò¼Ü¡£
-- Ê¹ÓÃMaven¶ÔÏîÄ¿½øĞĞÄ£¿é»¯¹ÜÀí£¬Ìá¸ßÏîÄ¿µÄÒ×¿ª·¢ĞÔ¡¢À©Õ¹ĞÔ¡£
-- ÏµÍ³°üÀ¨Èı¸öÄ£¿é£º¹«¹²Ä£¿é¡¢ÏµÍ³¹ÜÀíÄ£¿é¡¢WebÕ¹Ê¾Ä£¿é¡£
-- ¹«¹²Ä£¿é£º¹«¹²¹¦ÄÜ(AOP¡¢»º´æ¡¢»ùÀà¡¢µ÷¶ÈµÈµÈ)¡¢¹«¹²ÅäÖÃ¡¢¹¤¾ßÀà¡£
-- ÏµÍ³¹ÜÀíÄ£¿é£º°üÀ¨ÓÃ»§¹ÜÀí¡¢È¨ÏŞ¹ÜÀí¡¢Êı¾İ×Öµä¡¢ÏµÍ³²ÎÊı¹ÜÀíµÈµÈ¡£
-- Ã¿¸öÄ£¿é¶¼ÊÇ¶ÀÁ¢µÄÏµÍ³£¬¿ÉÒÔÎŞÏŞµÄÀ©Õ¹Ä£¿é£¬Ä£¿éÖ®¼äÊ¹ÓÃDubbo»òMQ½øĞĞÍ¨ĞÅ¡£
-- Ã¿¸öÄ£¿é·şÎñ¶àÏµÍ³²¿Êğ£¬×¢²áµ½Í¬Ò»¸öZookeeper¼¯Èº·şÎñ×¢²áÖĞĞÄ£¬ÊµÏÖ¼¯Èº²¿Êğ¡£
+- iBase4Jæ˜¯Javaè¯­è¨€çš„åˆ†å¸ƒå¼ç³»ç»Ÿæ¶æ„ã€‚ ä½¿ç”¨Springæ•´åˆå¼€æºæ¡†æ¶ã€‚
+- ä½¿ç”¨Mavenå¯¹é¡¹ç›®è¿›è¡Œæ¨¡å—åŒ–ç®¡ç†ï¼Œæé«˜é¡¹ç›®çš„æ˜“å¼€å‘æ€§ã€æ‰©å±•æ€§ã€‚
+- ç³»ç»ŸåŒ…æ‹¬ä¸‰ä¸ªæ¨¡å—ï¼šå…¬å…±æ¨¡å—ã€ç³»ç»Ÿç®¡ç†æ¨¡å—ã€Webå±•ç¤ºæ¨¡å—ã€‚
+- å…¬å…±æ¨¡å—ï¼šå…¬å…±åŠŸèƒ½(AOPã€ç¼“å­˜ã€åŸºç±»ã€è°ƒåº¦ç­‰ç­‰)ã€å…¬å…±é…ç½®ã€å·¥å…·ç±»ã€‚
+- ç³»ç»Ÿç®¡ç†æ¨¡å—ï¼šåŒ…æ‹¬ç”¨æˆ·ç®¡ç†ã€æƒé™ç®¡ç†ã€æ•°æ®å­—å…¸ã€ç³»ç»Ÿå‚æ•°ç®¡ç†ç­‰ç­‰ã€‚
+- æ¯ä¸ªæ¨¡å—éƒ½æ˜¯ç‹¬ç«‹çš„ç³»ç»Ÿï¼Œå¯ä»¥æ— é™çš„æ‰©å±•æ¨¡å—ï¼Œæ¨¡å—ä¹‹é—´ä½¿ç”¨Dubboæˆ–MQè¿›è¡Œé€šä¿¡ã€‚
+- æ¯ä¸ªæ¨¡å—æœåŠ¡å¤šç³»ç»Ÿéƒ¨ç½²ï¼Œæ³¨å†Œåˆ°åŒä¸€ä¸ªZookeeperé›†ç¾¤æœåŠ¡æ³¨å†Œä¸­å¿ƒï¼Œå®ç°é›†ç¾¤éƒ¨ç½²ã€‚
 
-## Ö÷Òª¹¦ÄÜ
- 1. Êı¾İ¿â£ºDruidÊı¾İ¿âÁ¬½Ó³Ø£¬¼à¿ØÊı¾İ¿â·ÃÎÊĞÔÄÜ£¬Í³¼ÆSQLµÄÖ´ĞĞĞÔÄÜ¡£ Êı¾İ¿âÃÜÂë¼ÓÃÜ£¬¼ÓÃÜ·½Ê½Çë²é¿´PropertiesUtil£¬decryptPropertiesÊôĞÔÅäÖÃĞèÒª½âÃÜµÄkey¡£
- 2. ³Ö¾Ã²ã£ºmybatis³Ö¾Ã»¯£¬Ê¹ÓÃMyBatis-PlusÓÅ»¯£¬¼õÉÙsql¿ª·¢Á¿£»aopÇĞ»»Êı¾İ¿âÊµÏÖ¶ÁĞ´·ÖÀë¡£Transtraction×¢½âÊÂÎñ¡£
- 3. MVC£º »ùÓÚspring mvc×¢½â,Rest·ç¸ñController¡£ExceptionÍ³Ò»¹ÜÀí¡£
- 4. µ÷¶È£ºSpring+quartz, ¿ÉÒÔ²éÑ¯¡¢ĞŞ¸ÄÖÜÆÚ¡¢ÔİÍ£¡¢É¾³ı¡¢ĞÂÔö¡¢Á¢¼´Ö´ĞĞ£¬²éÑ¯Ö´ĞĞ¼ÇÂ¼µÈ¡£
- 5. »ùÓÚsessionµÄ¹ú¼Ê»¯ÌáÊ¾ĞÅÏ¢£¬Ö°ÔğÁ´Ä£Ê½µÄ±¾µØÓïÑÔÀ¹½ØÆ÷,ShiroµÇÂ¼¡¢URLÈ¨ÏŞ¹ÜÀí¡£»á»°¹ÜÀí£¬Ç¿ÖÆ½áÊø»á»°¡£
- 6. »º´æºÍSession£º×¢½âredis»º´æÊı¾İ£¬Spring-sessionºÍredisÊµÏÖ·Ö²¼Ê½sessionÍ¬²½£¬ÖØÆô·şÎñ»á»°²»¶ªÊ§¡£
- 7. ¶àÏµÍ³½»»¥£ºDubbo,ActiveMQ¶àÏµÍ³½»»¥£¬ftp/sftp/fastdafs·¢ËÍÎÄ¼şµ½¶ÀÁ¢·şÎñÆ÷£¬Ê¹ÎÄ¼ş·şÎñ·ÖÀë¡£
- 8. Ç°ºó¶Ë·ÖÀë£ºÃ»ÓĞÈ¨ÏŞµÄÎÄ¼şÖ»ÓÃnginx´úÀí¼´¿É¡£
- 9. ÈÕÖ¾£ºlog4j2´òÓ¡ÈÕÖ¾£¬ÒµÎñÈÕÖ¾ºÍµ÷ÊÔÈÕÖ¾·Ö¿ª´òÓ¡¡£Í¬Ê±»ùÓÚÊ±¼äºÍÎÄ¼ş´óĞ¡·Ö¸îÈÕÖ¾ÎÄ¼ş¡£
- 10. QQ¡¢Î¢ĞÅ¡¢ĞÂÀËÎ¢²©µÚÈı·½µÇÂ¼¡£
- 11. ¹¤¾ßÀà£ºexcelµ¼Èëµ¼³ö£¬ºº×Ö×ªÆ´Òô£¬Éí·İÖ¤ºÅÂëÑéÖ¤£¬Êı×Ö×ª´óĞ´ÈËÃñ±Ò£¬FTP/SFTP/fastDFSÉÏ´«ÏÂÔØ£¬·¢ËÍÓÊ¼ş£¬redis»º´æ£¬¼ÓÃÜµÈµÈ¡£
+## ä¸»è¦åŠŸèƒ½
+ 1. æ•°æ®åº“ï¼šDruidæ•°æ®åº“è¿æ¥æ± ï¼Œç›‘æ§æ•°æ®åº“è®¿é—®æ€§èƒ½ï¼Œç»Ÿè®¡SQLçš„æ‰§è¡Œæ€§èƒ½ã€‚ æ•°æ®åº“å¯†ç åŠ å¯†ï¼ŒåŠ å¯†æ–¹å¼è¯·æŸ¥çœ‹PropertiesUtilï¼ŒdecryptPropertieså±æ€§é…ç½®éœ€è¦è§£å¯†çš„keyã€‚
+ 2. æŒä¹…å±‚ï¼šmybatisæŒä¹…åŒ–ï¼Œä½¿ç”¨MyBatis-Plusä¼˜åŒ–ï¼Œå‡å°‘sqlå¼€å‘é‡ï¼›aopåˆ‡æ¢æ•°æ®åº“å®ç°è¯»å†™åˆ†ç¦»ã€‚Transtractionæ³¨è§£äº‹åŠ¡ã€‚
+ 3. MVCï¼š åŸºäºspring mvcæ³¨è§£,Resté£æ ¼Controllerã€‚Exceptionç»Ÿä¸€ç®¡ç†ã€‚
+ 4. è°ƒåº¦ï¼šSpring+quartz, å¯ä»¥æŸ¥è¯¢ã€ä¿®æ”¹å‘¨æœŸã€æš‚åœã€åˆ é™¤ã€æ–°å¢ã€ç«‹å³æ‰§è¡Œï¼ŒæŸ¥è¯¢æ‰§è¡Œè®°å½•ç­‰ã€‚
+ 5. åŸºäºsessionçš„å›½é™…åŒ–æç¤ºä¿¡æ¯ï¼ŒèŒè´£é“¾æ¨¡å¼çš„æœ¬åœ°è¯­è¨€æ‹¦æˆªå™¨,Shiroç™»å½•ã€URLæƒé™ç®¡ç†ã€‚ä¼šè¯ç®¡ç†ï¼Œå¼ºåˆ¶ç»“æŸä¼šè¯ã€‚
+ 6. ç¼“å­˜å’ŒSessionï¼šæ³¨è§£redisç¼“å­˜æ•°æ®ï¼ŒSpring-sessionå’Œrediså®ç°åˆ†å¸ƒå¼sessionåŒæ­¥ï¼Œé‡å¯æœåŠ¡ä¼šè¯ä¸ä¸¢å¤±ã€‚
+ 7. å¤šç³»ç»Ÿäº¤äº’ï¼šDubbo,ActiveMQå¤šç³»ç»Ÿäº¤äº’ï¼Œftp/sftp/fastdafså‘é€æ–‡ä»¶åˆ°ç‹¬ç«‹æœåŠ¡å™¨ï¼Œä½¿æ–‡ä»¶æœåŠ¡åˆ†ç¦»ã€‚
+ 8. å‰åç«¯åˆ†ç¦»ï¼šæ²¡æœ‰æƒé™çš„æ–‡ä»¶åªç”¨nginxä»£ç†å³å¯ã€‚
+ 9. æ—¥å¿—ï¼šlog4j2æ‰“å°æ—¥å¿—ï¼Œä¸šåŠ¡æ—¥å¿—å’Œè°ƒè¯•æ—¥å¿—åˆ†å¼€æ‰“å°ã€‚åŒæ—¶åŸºäºæ—¶é—´å’Œæ–‡ä»¶å¤§å°åˆ†å‰²æ—¥å¿—æ–‡ä»¶ã€‚
+ 10. QQã€å¾®ä¿¡ã€æ–°æµªå¾®åšç¬¬ä¸‰æ–¹ç™»å½•ã€‚
+ 11. å·¥å…·ç±»ï¼šexcelå¯¼å…¥å¯¼å‡ºï¼Œæ±‰å­—è½¬æ‹¼éŸ³ï¼Œèº«ä»½è¯å·ç éªŒè¯ï¼Œæ•°å­—è½¬å¤§å†™äººæ°‘å¸ï¼ŒFTP/SFTP/fastDFSä¸Šä¼ ä¸‹è½½ï¼Œå‘é€é‚®ä»¶ï¼Œredisç¼“å­˜ï¼ŒåŠ å¯†ç­‰ç­‰ã€‚
 
-## ¼¼ÊõÑ¡ĞÍ
-    ¡ñ ºËĞÄ¿ò¼Ü£ºSpring Framework 4.3.0 + Dubbo 2.5.3
-    ¡ñ °²È«¿ò¼Ü£ºApache Shiro 1.2
-    ¡ñ ÈÎÎñµ÷¶È£ºSpring + Quartz
-    ¡ñ ³Ö¾Ã²ã¿ò¼Ü£ºMyBatis 3.4 + MyBatis-Plus 2.0
-    ¡ñ Êı¾İ¿âÁ¬½Ó³Ø£ºAlibaba Druid 1.0
-    ¡ñ »º´æ¿ò¼Ü£ºRedis
-    ¡ñ »á»°¹ÜÀí£ºSpring-Session 1.3.0
-    ¡ñ ÈÕÖ¾¹ÜÀí£ºSLF4J¡¢Log4j2
-    ¡ñ Ç°¶Ë¿ò¼Ü£ºAngular JS + Bootstrap + Jquery
+## æŠ€æœ¯é€‰å‹
+    â— æ ¸å¿ƒæ¡†æ¶ï¼šSpring Framework 4.3.0 + Dubbo 2.5.3
+    â— å®‰å…¨æ¡†æ¶ï¼šApache Shiro 1.2
+    â— ä»»åŠ¡è°ƒåº¦ï¼šSpring + Quartz
+    â— æŒä¹…å±‚æ¡†æ¶ï¼šMyBatis 3.4 + MyBatis-Plus 2.0
+    â— æ•°æ®åº“è¿æ¥æ± ï¼šAlibaba Druid 1.0
+    â— ç¼“å­˜æ¡†æ¶ï¼šRedis
+    â— ä¼šè¯ç®¡ç†ï¼šSpring-Session 1.3.0
+    â— æ—¥å¿—ç®¡ç†ï¼šSLF4Jã€Log4j2
+    â— å‰ç«¯æ¡†æ¶ï¼šAngular JS + Bootstrap + Jquery
 
-## Æô¶¯ËµÃ÷
-    * ÏîÄ¿ÒÀÀµactivemq¡¢RedisºÍZooKeeper·şÎñ¡£
-    * Æô¶¯SYS-ServiceÃüÁî£ºclean package -P build tomcat7:run-war-only -f pom-sys-service-server.xml
-    * Æô¶¯WebÃüÁî£ºclean package -P build tomcat7:run-war-only -f pom-sys-web-server.xml
-    * Ê¹ÓÃnginx´úÀíUI£ºĞŞ¸ÄÅäÖÃÀïµÄUIÄ¿Â¼ºóÖØÆônginx¡£
+## å¯åŠ¨è¯´æ˜
+    * é¡¹ç›®ä¾èµ–activemqã€Rediså’ŒZooKeeperæœåŠ¡ã€‚
+    * å¯åŠ¨SYS-Serviceå‘½ä»¤ï¼šclean package -P build tomcat7:run-war-only -f pom-sys-service-server.xml
+    * å¯åŠ¨Webå‘½ä»¤ï¼šclean package -P build tomcat7:run-war-only -f pom-sys-web-server.xml
+    * ä½¿ç”¨nginxä»£ç†UIï¼šä¿®æ”¹é…ç½®é‡Œçš„UIç›®å½•åé‡å¯nginxã€‚
     
-## °æÈ¨ÉùÃ÷
-iBase4JÊ¹ÓÃ [Apache License 2.0][] Ğ­Òé.
+## ç‰ˆæƒå£°æ˜
+iBase4Jä½¿ç”¨ [Apache License 2.0][] åè®®.
 
-## ½¨Òé
-¿ÉÒÔÏÈ¿´Ò»ÏÂ²ğ·ÖÇ°µÄ°æ±¾£¬µØÖ·£º[iBase4J-old][].
+## å»ºè®®
+å¯ä»¥å…ˆçœ‹ä¸€ä¸‹æ‹†åˆ†å‰çš„ç‰ˆæœ¬ï¼Œåœ°å€ï¼š[iBase4J-old][].
 
-## ¼ÓÈëQQÈº[538240548](http://shang.qq.com/wpa/qunwpa?idkey=b0fb32618d54e6a7f3cb718cd469b2952c8a968b1ef6f17fd68c83338ae4bce3) [498085331](http://shang.qq.com/wpa/qunwpa?idkey=0a7344955bb9b9f6e366d34be42c02709c933f308ab435b1a52ac17d40efdff5)
-½»Á÷¼¼ÊõÎÊÌâ£¬ÏÂÔØÏîÄ¿ÎÄµµºÍÒ»¼üÆô¶¯ÒÀÀµ·şÎñ¹¤¾ß¡£
+## åŠ å…¥QQç¾¤[538240548](http://shang.qq.com/wpa/qunwpa?idkey=b0fb32618d54e6a7f3cb718cd469b2952c8a968b1ef6f17fd68c83338ae4bce3) [498085331](http://shang.qq.com/wpa/qunwpa?idkey=0a7344955bb9b9f6e366d34be42c02709c933f308ab435b1a52ac17d40efdff5)
+äº¤æµæŠ€æœ¯é—®é¢˜ï¼Œä¸‹è½½é¡¹ç›®æ–‡æ¡£å’Œä¸€é”®å¯åŠ¨ä¾èµ–æœåŠ¡å·¥å…·ã€‚
 
-![QQÈº](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/1464169485871.png "QQÈºÒ»")
-![QQÈº](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/1482378175294.png "QQÈº¶ş")
+![QQç¾¤](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/1464169485871.png "QQç¾¤ä¸€")
+![QQç¾¤](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/1482378175294.png "QQç¾¤äºŒ")
 
-## UIĞ§¹ûÍ¼
+## UIæ•ˆæœå›¾
 
-![µÇÂ¼](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/login.png "µÇÂ¼")
-![Ö÷Ò³](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/index.png "Ö÷Ò³")
-![½Ó¿Ú](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/swagger.png "½Ó¿Ú")
+![ç™»å½•](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/login.png "ç™»å½•")
+![ä¸»é¡µ](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/index.png "ä¸»é¡µ")
+![æ¥å£](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/swagger.png "æ¥å£")
 
 ## License
 iBase4J is released under version 2.0 of the [Apache License][].
-
-![¾èÔù](http://git.oschina.net/iBase4J/iBase4J/raw/master/img/contribute.png "¾èÔù")
 
 [Apache License 2.0]: http://www.apache.org/licenses/LICENSE-2.0
 [iBase4J-old]: http://git.oschina.net/iBase4J/iBase4J/tree/NoSplit
